@@ -38,11 +38,11 @@
            <br><br>i am 16 years of age, residing in the united kingdom. i have been working with computers, inside and out, since i was a kid, yet i am still mediocre. maybe a little better.
            <br><br>want to contact me? you can email me at <a href=mailto:"hello@x2corp.me">hello@x2corp.me</a>, or add me on discord, under <a>x2corp</a>. otherwise, go fuck yourself, i guess?
            <br><br> <a href="github.com/x2corp">github</a> • 
-           <a href="twitch.tv/x2corp">twitch</a> • 
-           <a href="twitter.com/v2kware">twitter</a> • 
-           <a href="rateyourmusic.com/~x2corp">rym</a> • 
+           <a href="https://twitch.tv/x2corp">twitch</a> • 
+           <a href="https://twitter.com/v2kware">twitter</a> • 
+           <a href="https://rateyourmusic.com/~x2corp">rym</a> • 
            <a href="https://www.youtube.com/@9atlas/videos">youtube</a> •
-           <a href="last.fm/user/vx8">fm</a>
+           <a href="https://last.fm/user/vx8">fm</a>
            <center><br><a href="https://www.last.fm/user/vx8/now" style="text-decoration-color: white"><span id="np"></span></a>
         </div>
         <script>
@@ -59,6 +59,9 @@
                     $("#artwork").attr("src", artwork);       
                     document.getElementById("np").innerHTML = (artist + " - " + track)
         }
+                if (typeof data.recenttracks.track[0]["@attr"] = "undefined")
+                {
+                    document.getElementById("np").innerHTML = ("n/a - not listening rn")
     });
             </script>
     </body>
