@@ -4,6 +4,7 @@ body {
   color: white;
   display: flex;
 }
+
 .box {
   margin: 15px;
   border: 2px solid white;
@@ -14,18 +15,19 @@ body {
 img {
   padding-bottom: 15px;
 }
+
 a {
   color: red;
 }
 
 #np {
-  font-size: 10px;
+  font-size: 12px;
   text-align: left;
   color: white;
 }
 
 #listening {
-  font-size: 10px; 
+  font-size: 12px; 
 }
 
 .para {
