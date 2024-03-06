@@ -1,0 +1,33 @@
+body {
+  font-family: MS UI Gothic;
+  background-color: black;
+  color: white;
+  display: flex;
+}
+.box {
+  margin: 15px;
+  border: 2px solid white;
+  width: 300px;
+  padding: 15px;
+}
+
+img {
+  padding-bottom: 15px;
+}
+a {
+  color: red;
+}
+
+#np {
+  font-size: 10px;
+  text-align: left;
+  color: white;
+}
+
+#listening {
+  font-size: 10px; 
+}
+
+.para {
+  margin-bottom: 10px;
+}

@@ -1,48 +1,38 @@
 <html>
     <head>
-        <meta charset="UTF-8">
-        <link rel="icon" type="image/png" href="256x256.png"/>
+        <meta charset="UTF-8">    
+        <link rel="icon" type="image/png" href="./assets/favicon.png"/>
+        <link rel="stylesheet" href="./assets/index.css" type="text/css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>       
         <title>x2corp</title>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-        <style>
-            body{
-                font-family: MS UI Gothic;
-                background-color: black;
-                color: white;
-                display: flex;
-            }
-            .box{
-                margin:15px;
-                border:2px solid white;
-                width: 300px;
-                padding:15px;
-            }
-            img{
-                padding-bottom:15px;
-            }
-            a{
-                color:red;
-            }
-
-            #np{
-                font-size: 12px;
-                text-align: left;
-                color: white;
-            }
-
-            #listening{
-                font-size: 14px;
-            }
-        </style>
     </head>
 
     <body>
         <div class="box">
-           <b>hi, i'm elle.</b> i'm a scripter, composer, source engine maniac, content creator, painkiller addict and a lot of other things you can probably list.
-           <br><br>i am 16 years of age, residing in the united kingdom. i have been working with computers, inside and out, since i was a kid, yet i am still mediocre. maybe a little better.
-           <br><br>want to contact me? you can email me at <a href=mailto:"hello@x2corp.me">hello@x2corp.me</a>, or add me on discord, under <a>x2corp</a>. 
-           <br><br>i am currently <b>open</b> for scripting and/or ux commissions, but you have to say please :)
-           <br><br><span id="listening">currently listening to:</span> <a href="https://www.last.fm/user/vx8/now" style="text-decoration-color: white"><span id="np"></span></a> 
+            <div class="para">
+                <b>hi, i'm elle.</b> 
+                i'm a scripter, composer, source engine maniac, content creator, painkiller addict 
+                and a lot of other things you can probably list.
+            </div>
+            
+            <div class="para">
+                i am 16 years of age, residing in the united kingdom. 
+                i have been working with computers, inside and out, since i was a kid, 
+                yet i am still mediocre. maybe a little better.
+            </div>
+            
+            <div class="para">
+                want to contact me? 
+                you can email me at <a href=mailto:"hello@x2corp.me">hello@x2corp.me</a>, 
+                or add me on discord, under <a>x2corp</a>.
+            </div> 
+            
+            <div class="para">
+                i am currently <b>open</b> for scripting and/or ux commissions, 
+                but you have to say please :^)
+            </div>
+
+           <span id="listening">currently listening to:</span> <a href="https://www.last.fm/user/vx8/now" style="text-decoration-color: white"><span id="np"></span></a> 
            <br><a href="github.com/x2corp">github</a> • 
            <a href="https://twitch.tv/x2corp">twitch</a> • 
            <a href="https://twitter.com/v2kware">twitter</a> • 
@@ -50,25 +40,7 @@
            <a href="https://www.youtube.com/@9atlas/videos">youtube</a> •
            <a href="https://last.fm/user/vx8">fm</a>
         </div>
-        <script>
-        
-            $.get("https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=vx8&api_key=1f633977acf0e2d0630ec11dbc350d3e&format=json", function(data) 
-            {
-                if (typeof data.recenttracks.track[0]["@attr"] != "undefined")
-                {
-                    artist = data.recenttracks.track[0].artist["#text"];
-                    track = data.recenttracks.track[0].name;
-                    album = data.recenttracks.track[0].album["#text"];
-                    artwork = data.recenttracks.track[0].image[1]["#text"];
-                    
-                    $("#artwork").attr("src", artwork);       
-                    document.getElementById("np").innerHTML = (artist + " - " + track)
-        }
-                if (typeof data.recenttracks.track[0]["@attr"] == "undefined")
-                {
-                    document.getElementById("np").innerHTML = ("absolutely fucking nothing")
-        }
-    });
-            </script>
+
+        <script src="./assets/index.js" type="text/javascript"></script> <!-- not quite sure why i have to put it here but oh well -->
     </body>
 </html>
