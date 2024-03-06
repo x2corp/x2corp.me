@@ -1,39 +1,13 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <link rel="icon" type="image/png" href="256x256.png"/>
-        <title>x2corp</title>
+        
+        <link rel="icon" type="image/png" href="assets/favicon.png"/>
+        <script src="assets/index.js" type="text/javascript"></script>
+        <link rel="stylesheet" src="assets/index.css">
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-        <style>
-            body{
-                font-family: MS UI Gothic;
-                background-color: black;
-                color: white;
-                display: flex;
-            }
-            .box{
-                margin:15px;
-                border:2px solid white;
-                width: 300px;
-                padding:15px;
-            }
-            img{
-                padding-bottom:15px;
-            }
-            a{
-                color:red;
-            }
-
-            #np{
-                font-size: 12px;
-                text-align: left;
-                color: white;
-            }
-
-            #listening{
-                font-size: 14px;
-            }
-        </style>
+        
+        <title>x2corp</title>
     </head>
 
     <body>
@@ -50,25 +24,5 @@
            <a href="https://www.youtube.com/@9atlas/videos">youtube</a> •
            <a href="https://last.fm/user/vx8">fm</a>
         </div>
-        <script>
-        
-            $.get("https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=vx8&api_key=1f633977acf0e2d0630ec11dbc350d3e&format=json", function(data) 
-            {
-                if (typeof data.recenttracks.track[0]["@attr"] != "undefined")
-                {
-                    artist = data.recenttracks.track[0].artist["#text"];
-                    track = data.recenttracks.track[0].name;
-                    album = data.recenttracks.track[0].album["#text"];
-                    artwork = data.recenttracks.track[0].image[1]["#text"];
-                    
-                    $("#artwork").attr("src", artwork);       
-                    document.getElementById("np").innerHTML = (artist + " - " + track)
-        }
-                if (typeof data.recenttracks.track[0]["@attr"] == "undefined")
-                {
-                    document.getElementById("np").innerHTML = ("absolutely fucking nothing")
-        }
-    });
-            </script>
     </body>
 </html>
