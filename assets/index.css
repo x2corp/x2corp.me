@@ -19,11 +19,15 @@ a {
 }
 
 #np {
-  font-size: 12px;
+  font-size: 10px;
   text-align: left;
   color: white;
 }
 
 #listening {
-  font-size: 13px;
+  font-size: 10px; 
+}
+
+.para {
+  margin-bottom: 10px;
 }
